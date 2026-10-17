@@ -15,10 +15,6 @@ func _ready() -> void:
 	box.set_anchors_preset(Control.PRESET_FULL_RECT)
 	box.add_theme_constant_override("separation", 10)
 	add_child(box)
-	story = Label.new()
-	story.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	story.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	story.text = "Turn %d. Press «Next» and the AI continues the story." % turns
 	box.add_child(story)
 	var next := Button.new()
 	next.text = "Next"
@@ -33,10 +29,7 @@ func _ready() -> void:
 func _next() -> void:
 	turns += 1
 	_save({"turns": turns})
-	var asked: bool = Pax.ask_ai("story", "Continue a short sci-fi story, turn %d, two sentences." % turns, {},
-		func(answer: Dictionary): story.text = "Turn %d.\n%s" % [turns, str(answer.get("text", answer))])
-	if not asked:
-		story.text = "Turn %d. The AI is not set up: open AI settings in the launcher." % turns
+
 
 
 func _path() -> String:

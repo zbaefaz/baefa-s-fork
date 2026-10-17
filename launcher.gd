@@ -20,7 +20,6 @@ func _ready() -> void:
 	box.add_child(me)
 	_button(box, "▶  Play", func(): Pax.platform.play())
 	_button(box, "🛠️  Workshop", func(): Pax.platform.open("store"))
-	_button(box, "🧠  AI settings", func(): Pax.platform.open("нейросеть"))
 	_button(box, "🌌  Switch game", func(): Pax.platform.switch_game())
 
 

@@ -1,19 +1,17 @@
 {
-	"id": "baefa-s-fork",
-	"name": {"en": "Baefa's fork'", "ru": "Форк Мистера Баефы"},
+	"id": "baefa_s_fork",
+	"name": {"en": "Baefa's fork", "ru": "Форк Мистера Баефы"},
 	"version": "1.0.0",
-	"api": 1,
-	"authors": ["you"],
 	"description": {
 		"en": "A fork template: your own game on the Pax Universe platform with its own launcher and scene.",
 		"ru": "Шаблон форка: своя игра на платформе Pax Universe со своим лаунчером и своей сценой."
 	},
 	"fork": {
-		"game": "0.29.0",
+		"game": "0.31.2",
 		"base": "none",
 		"scene": "res://mods/baefa_s_fork/main.tscn",
 		"launcher": "res://mods/baefa_s_fork/launcher.tscn",
 		"saves": "own",
-		"ai": "any"
+		"ai": "none"
 	}
 }
